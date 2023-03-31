@@ -4,17 +4,17 @@ pipeline {
         stage(' clean') { 
             steps {
                
-                bat "mvn clean -f maven-standalone-application"
+                bat "mvn clean "
             }
         }
         stage('Test') { 
             steps {
-                bat "mvn test -f maven-standalone-application"
+                bat "mvn test "
             }
         }
         stage('Deploy') { 
             steps {
-                bat "mvn package -f maven-standalone-application"
+                bat "mvn package "
             }
         }
     }
